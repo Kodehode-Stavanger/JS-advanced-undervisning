@@ -74,8 +74,9 @@ function namedCallback() {
   console.log("OK");
 } */
 
+// click event listener. Attached to an HTML element. Function runs when clicked.
 let blueModeToggle = false;
-btn.addEventListener("dblclick", (event) => {
+btn.addEventListener("click", (event) => {
   blueModeToggle = !blueModeToggle;
   if (blueModeToggle) btn.style.backgroundColor = "blue";
   if (!blueModeToggle) btn.style.backgroundColor = "black";
@@ -85,6 +86,8 @@ btn.addEventListener("dblclick", (event) => {
   document.body.append(data);
 });
 
+// keydown (keyboard) event listener attached to global window object
+// need to check what key has been pressed to make stuff happen.
 window.addEventListener("keydown", (e) => {
   console.log(e);
   if (e.key === "7" && e.ctrlKey) window.alert("OMG you pressed ctrl+7!!! ");
